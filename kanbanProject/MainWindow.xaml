@@ -1,0 +1,91 @@
+﻿<Window x:Name="window" x:Class="kanbanProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kanbanProject" xmlns:viewmodel="clr-namespace:kanbanProject.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Height="650" Width="1200" 
+        Background="#13181e" 
+        ResizeMode="CanResizeWithGrip"
+        WindowStyle="None"
+        AllowsTransparency="True">
+
+    <Window.DataContext>
+        <viewmodel:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Background="#FF040D17"
+                MouseDown="Border_MouseDown">
+
+            <Grid HorizontalAlignment="Stretch">
+
+                <Label Content="Kanban"
+                       Foreground="#edf2f7"
+                       FontWeight="SemiBold"/>
+
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+
+                    <Button Width="20" Height="20"
+                            Content="＿"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#edf2f7"
+                            FontWeight="Bold"
+                            Click="ButtonMinimize_Click"/>
+
+                    <Button Width="20" Height="20"
+                            Content="▢" FontSize="15"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#edf2f7"
+                            FontWeight="Bold"
+                            Click="ButtonMaximize_Click"/>
+
+                    <Button Width="20" Height="20"
+                            Content="╳"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#edf2f7"
+                            FontWeight="Bold"
+                            Click="ButtonClose_Click"/>
+
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1">
+            <Grid Width="1200">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                              VerticalScrollBarVisibility="Auto">
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Stretch"
+                                Width="Auto">
+
+                        <Grid Width="1200">
+
+                            <Button HorizontalAlignment="Center"
+                                Height="50"
+                                Width="50"
+                                BorderThickness="0">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Icons/plusSymobl.png"/>
+                                </Button.Background>
+                            </Button>
+
+                        </Grid>
+                        
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
