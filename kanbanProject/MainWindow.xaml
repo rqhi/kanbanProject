@@ -70,7 +70,7 @@
                                 HorizontalAlignment="Stretch"
                                 Width="Auto">
 
-                        <Grid Width="1200">
+                        <Grid HorizontalAlignment="Center">
 
                             <Button HorizontalAlignment="Center"
                                 Height="50"

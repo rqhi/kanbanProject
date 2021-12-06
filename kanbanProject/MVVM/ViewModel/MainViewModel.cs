@@ -8,5 +8,6 @@ namespace kanbanProject.MVVM.ViewModel
 {
     internal class MainViewModel
     {
+
     }
 }
