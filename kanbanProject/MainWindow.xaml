@@ -55,35 +55,40 @@
                             BorderThickness="0"
                             Foreground="#edf2f7"
                             FontWeight="Bold"
-                            Click="ButtonClose_Click"/>
+                            Click="ButtonClose_Click"
+                            Margin="0,0,10,0"/>
 
                 </StackPanel>
             </Grid>
         </Border>
 
         <Border Grid.Row="1">
-            <Grid Width="1200">
+            <Grid Width="1200"
+                 HorizontalAlignment="Left">
                 <ScrollViewer HorizontalScrollBarVisibility="Auto"
-                              VerticalScrollBarVisibility="Auto">
+                              VerticalScrollBarVisibility="Auto"
+                              HorizontalAlignment="Left">
 
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Stretch"
-                                Width="Auto">
+                        <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                
+                                x:Name="MainStackPanel">
 
-                        <Grid HorizontalAlignment="Center">
+                        
 
-                            <Button HorizontalAlignment="Center"
+                            <Button HorizontalAlignment="Right"
                                 Height="50"
                                 Width="50"
-                                BorderThickness="0">
+                                BorderThickness="0"
+                                Click="addColumnButton_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Icons/plusSymobl.png"/>
                                 </Button.Background>
                             </Button>
-
-                        </Grid>
+                            
                         
-                    </StackPanel>
+                        </StackPanel>
+
                 </ScrollViewer>
             </Grid>
         </Border>

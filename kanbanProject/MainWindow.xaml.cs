@@ -48,5 +48,13 @@ namespace kanbanProject
         {
             Application.Current.Shutdown();
         }
+
+        private void addColumnButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentControl contentControl = new ContentControl();
+            contentControl.Style = (Style)FindResource("Column");
+
+            MainStackPanel.Children.Add(contentControl);    
+        }
     }
 }
