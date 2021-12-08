@@ -51,6 +51,7 @@ namespace kanbanProject
 
         private void addColumnButton_Click(object sender, RoutedEventArgs e)
         {
+
             ContentControl contentControl = new ContentControl();
             contentControl.Style = (Style)FindResource("Column");
 
